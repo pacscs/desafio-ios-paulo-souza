@@ -1,5 +1,5 @@
 //
-//  ComicDetailViewController.swift
+//  ComicViewController.swift
 //  desafio-ios-paulo-souza
 //
 //  Created by Paulo Alfredo Coraini de Souza on 12/03/21.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-class ComicDetailViewController: BaseViewController {
+class ComicViewController: BaseViewController {
 
     @IBOutlet weak var stackViewImage: UIStackView!
     @IBOutlet weak var viewIcon: UIView!
-    @IBOutlet weak var imgIcon: UIImageView!
-    @IBOutlet weak var progress: UIActivityIndicatorView!
+    @IBOutlet weak var imageIcon: UIImageView!
+    @IBOutlet weak var progressActivity: UIActivityIndicatorView!
     @IBOutlet weak var stackViewTitle: UIStackView!
-    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var stackViewDescription: UIStackView!
-    @IBOutlet weak var lblDescription: UILabel!
-    @IBOutlet weak var btnDescription: UIButton!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var buttonDescription: UIButton!
     @IBOutlet weak var stackViewPrice: UIStackView!
-    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet var cstImageW: NSLayoutConstraint!
     @IBOutlet var cstImageH: NSLayoutConstraint!
     
@@ -27,7 +27,7 @@ class ComicDetailViewController: BaseViewController {
     
     required init(comic: MarvelComicsResult) {
         self.comic = comic
-        super.init(nibName: "ComicDetailViewController", bundle: nil)
+        super.init(nibName: "ComicViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -48,19 +48,19 @@ class ComicDetailViewController: BaseViewController {
     }
     
     func setupView() {
-        self.progress.isAccessibilityElement = false
+        self.progressActivity.isAccessibilityElement = false
         self.stackViewTitle.isAccessibilityElement = true
         self.stackViewDescription.isAccessibilityElement = true
         self.stackViewPrice.isAccessibilityElement = true
         if let title = self.comic.title {
-            self.lblTitle.text = title
+            self.labelTitle.text = title
             self.stackViewTitle.accessibilityLabel = "title: \(title)"
             self.stackViewTitle.isHidden = false
         } else {
             self.stackViewTitle.isHidden = true
         }
         if let resultDescription = self.comic.resultDescription {
-            self.lblDescription.text = resultDescription
+            self.labelDescription.text = resultDescription
             self.stackViewDescription.accessibilityLabel = "description: \(resultDescription)"
             self.stackViewDescription.isHidden = false
         } else {
@@ -71,7 +71,7 @@ class ComicDetailViewController: BaseViewController {
         currencyFormatter.numberStyle = .currency
         currencyFormatter.locale = Locale(identifier: "en_US")
         if let prices = self.comic.prices, let first = prices.first, let price = first.price, let priceString = currencyFormatter.string(from: NSNumber(value: price)) {
-            self.lblPrice.text = priceString
+            self.labelPrice.text = priceString
             self.stackViewPrice.accessibilityLabel = "price: \(priceString)"
             self.stackViewPrice.isHidden = false
         } else {
@@ -82,12 +82,12 @@ class ComicDetailViewController: BaseViewController {
     
     func setupImage() {
         self.viewIcon.dropShadow()
-        self.imgIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:))))
+        self.imageIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:))))
         self.loadImage()
     }
     
     func loadImage() {
-        self.progress.startAnimating()
+        self.progressActivity.startAnimating()
         if let image = Service.shared.readImage(type: .cover, withFileName: self.comic.thumbnail.pathString()) {
             self.populateImage(image: image)
         } else {
@@ -98,7 +98,7 @@ class ComicDetailViewController: BaseViewController {
             }, callBackError: {
                 DispatchQueue.main.async {
                     self.stackViewImage.isHidden = true
-                    self.progress.stopAnimating()
+                    self.progressActivity.stopAnimating()
                 }
             })
         }
@@ -106,20 +106,20 @@ class ComicDetailViewController: BaseViewController {
     
     func populateImage(image: UIImage) {
         self.stackViewImage.isHidden = false
-        self.progress.stopAnimating()
-        self.imgIcon.image = image
+        self.progressActivity.stopAnimating()
+        self.imageIcon.image = image
         self.cstImageW.constant = 158
         self.cstImageH.constant = (image.size.height * 158) / image.size.width
     }
 
     @IBAction func btnDescription(_ sender: UIButton) {
-        self.lblDescription.numberOfLines = self.lblDescription.numberOfLines == 3 ? 0 : 3
+        self.labelDescription.numberOfLines = self.labelDescription.numberOfLines == 3 ? 0 : 3
     }
     
     @objc
     func imageTapped(_ sender: UITapGestureRecognizer) {
         if let keyWindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive}).map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.filter({$0.isKeyWindow}).first,
-            let imageView = self.imgIcon,
+            let imageView = self.imageIcon,
             let image = imageView.image {
             let bgView = UIView()
             bgView.frame = keyWindow.frame
@@ -145,7 +145,7 @@ class ComicDetailViewController: BaseViewController {
             newImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage)))
             newView.addSubview(newImageView)
             self.viewIcon.alpha = 0
-            self.imgIcon.alpha = 0
+            self.imageIcon.alpha = 0
             UIView.animate(withDuration: 0.75, animations: {
                 let wView = UIScreen.main.bounds.width
                 let hView = (image.size.height * wView) / image.size.width
@@ -166,11 +166,11 @@ class ComicDetailViewController: BaseViewController {
             let newImageView = newView.subviews.first(where: { $0.tag == 1707}) {
             UIView.animate(withDuration: 0.75, animations: {
                 newView.frame = self.viewIcon.convert(self.viewIcon.frame, to: nil)
-                newImageView.frame.size = CGSize(width: self.imgIcon.frame.size.width, height: self.imgIcon.frame.size.height)
+                newImageView.frame.size = CGSize(width: self.imageIcon.frame.size.width, height: self.imageIcon.frame.size.height)
                 bgView.alpha = 0
             }, completion: { (_) in
                 self.viewIcon.alpha = 1
-                self.imgIcon.alpha = 1
+                self.imageIcon.alpha = 1
                 bgView.removeFromSuperview()
                 newView.removeFromSuperview()
                 newImageView.removeFromSuperview()

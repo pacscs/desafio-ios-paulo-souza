@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var progress: UIActivityIndicatorView!
+    @IBOutlet weak var progressActivity: UIActivityIndicatorView!
     
     var characters: [MarvelCharacters] = Array()
     
@@ -35,7 +35,7 @@ class MainViewController: BaseViewController {
     }
     
     func loadCharacters(fake: Bool) {
-        self.progress.startAnimating()
+        self.progressActivity.startAnimating()
         if fake {
             if let responseCharacters = Service.shared.loadJson(type: MarvelCharacter.self, filename: "responseCharacters"), var characters = responseCharacters.data {
                 characters.total = 20
@@ -47,9 +47,9 @@ class MainViewController: BaseViewController {
     }
     
     func setupView() {
-        self.progress.isAccessibilityElement = false
+        self.progressActivity.isAccessibilityElement = false
         self.tableView.isHidden = true
-        self.tableView.register(UINib(nibName: "CharacterListTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacterListTableViewCell")
+        self.tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
     }
 
     func task() {
@@ -72,7 +72,7 @@ class MainViewController: BaseViewController {
         if self.firstTime {
             self.firstTime = false
             DispatchQueue.main.async {
-                self.progress.stopAnimating()
+                self.progressActivity.stopAnimating()
             }
         }
         DispatchQueue.main.async {
@@ -105,7 +105,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListTableViewCell", for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
         cell.setup(character: &self.characters[indexPath.row])
         return cell
     }
@@ -137,7 +137,7 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(CharacterDetailViewController(character: self.characters[indexPath.row]), animated: true)
+        self.navigationController?.pushViewController(CharacterViewController(character: self.characters[indexPath.row]), animated: true)
     }
     
 }

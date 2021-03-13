@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="desafio_ios_paulo_souza" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterViewController" customModule="desafio_ios_paulo_souza" customModuleProvider="target">
             <connections>
-                <outlet property="btnDescription" destination="QUf-3M-3Ah" id="mZB-pe-4I8"/>
-                <outlet property="btnMagazine" destination="tMK-0e-AbY" id="W4U-KH-X4U"/>
-                <outlet property="imgIcon" destination="tRn-bG-S6F" id="CaU-js-dH7"/>
-                <outlet property="lblDescription" destination="0fV-KJ-4aR" id="0q3-Ka-9Xx"/>
-                <outlet property="lblDescriptionTitle" destination="oJq-AP-K4l" id="1bJ-vU-eWv"/>
-                <outlet property="lblName" destination="cQz-KV-xHN" id="YP5-J8-CNj"/>
-                <outlet property="lblNameTitle" destination="lVI-ue-l8m" id="v1E-GK-E3D"/>
-                <outlet property="progress" destination="IwL-w7-AN9" id="wb7-1d-gs3"/>
+                <outlet property="ImageIcon" destination="tRn-bG-S6F" id="CaU-js-dH7"/>
+                <outlet property="LabelTitleDescription" destination="oJq-AP-K4l" id="1bJ-vU-eWv"/>
+                <outlet property="buttonDescription" destination="QUf-3M-3Ah" id="mZB-pe-4I8"/>
+                <outlet property="buttonMagazine" destination="tMK-0e-AbY" id="W4U-KH-X4U"/>
+                <outlet property="labelDescription" destination="0fV-KJ-4aR" id="0q3-Ka-9Xx"/>
+                <outlet property="labelName" destination="cQz-KV-xHN" id="YP5-J8-CNj"/>
+                <outlet property="labelTitleName" destination="lVI-ue-l8m" id="v1E-GK-E3D"/>
+                <outlet property="progressActivity" destination="IwL-w7-AN9" id="wb7-1d-gs3"/>
                 <outlet property="stackViewDescription" destination="m8B-d2-QMd" id="c4f-MB-4MA"/>
                 <outlet property="stackViewName" destination="Ws0-hT-EC0" id="2LS-wA-oXW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

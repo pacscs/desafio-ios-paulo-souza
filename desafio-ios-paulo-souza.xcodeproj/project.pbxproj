@@ -27,15 +27,15 @@
 		D9BECB0E25FBE8A900457255 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB0D25FBE8A900457255 /* ImageService.swift */; };
 		D9BECB2725FBEBF500457255 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB2625FBEBF500457255 /* BaseViewController.swift */; };
 		D9BECB3025FBEC2F00457255 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB2E25FBEC2F00457255 /* CharacterDetailViewController.swift */; };
-		D9BECB3725FBEC4900457255 /* ComicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB3525FBEC4900457255 /* ComicDetailViewController.swift */; };
+		D9BECB3725FBEC4900457255 /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB3525FBEC4900457255 /* ComicViewController.swift */; };
 		D9BECB3E25FBEC5D00457255 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB3C25FBEC5D00457255 /* MainViewController.swift */; };
 		D9BECB4525FBEC9400457255 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB4325FBEC9400457255 /* ListTableViewCell.swift */; };
 		D9BECB5D25FBF02A00457255 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB5C25FBF02A00457255 /* MainViewController.xib */; };
-		D9BECB6225FBF02F00457255 /* CharacterListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB6125FBF02F00457255 /* CharacterListTableViewCell.xib */; };
-		D9BECB6725FBF03400457255 /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB6625FBF03400457255 /* CharacterDetailViewController.xib */; };
+		D9BECB6225FBF02F00457255 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */; };
+		D9BECB6725FBF03400457255 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB6625FBF03400457255 /* CharacterViewController.xib */; };
 		D9BECB8525FC095D00457255 /* responseComics.json in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB8225FC095D00457255 /* responseComics.json */; };
 		D9BECB8725FC095D00457255 /* responseCharacters.json in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB8425FC095D00457255 /* responseCharacters.json */; };
-		D9BECBA925FC117600457255 /* ComicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECBA825FC117600457255 /* ComicDetailViewController.xib */; };
+		D9BECBA925FC117600457255 /* ComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECBA825FC117600457255 /* ComicViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,15 +81,15 @@
 		D9BECB0D25FBE8A900457255 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		D9BECB2625FBEBF500457255 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D9BECB2E25FBEC2F00457255 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
-		D9BECB3525FBEC4900457255 /* ComicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewController.swift; sourceTree = "<group>"; };
+		D9BECB3525FBEC4900457255 /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
 		D9BECB3C25FBEC5D00457255 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D9BECB4325FBEC9400457255 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D9BECB5C25FBF02A00457255 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = "../../../../Downloads/marvel-api-master/desafio-ios-fernando-cani/desafio-ios-fernando-cani/Controller/Main/MainViewController.xib"; sourceTree = "<group>"; };
-		D9BECB6125FBF02F00457255 /* CharacterListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterListTableViewCell.xib; sourceTree = "<group>"; };
-		D9BECB6625FBF03400457255 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
+		D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		D9BECB6625FBF03400457255 /* CharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
 		D9BECB8225FC095D00457255 /* responseComics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = responseComics.json; sourceTree = "<group>"; };
 		D9BECB8425FC095D00457255 /* responseCharacters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = responseCharacters.json; sourceTree = "<group>"; };
-		D9BECBA825FC117600457255 /* ComicDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicDetailViewController.xib; sourceTree = "<group>"; };
+		D9BECBA825FC117600457255 /* ComicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,9 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				D9BECB5C25FBF02A00457255 /* MainViewController.xib */,
-				D9BECB6125FBF02F00457255 /* CharacterListTableViewCell.xib */,
-				D9BECB6625FBF03400457255 /* CharacterDetailViewController.xib */,
-				D9BECBA825FC117600457255 /* ComicDetailViewController.xib */,
+				D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */,
+				D9BECB6625FBF03400457255 /* CharacterViewController.xib */,
+				D9BECBA825FC117600457255 /* ComicViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 		D9BECAE725FBE5DA00457255 /* Comic */ = {
 			isa = PBXGroup;
 			children = (
-				D9BECB3525FBEC4900457255 /* ComicDetailViewController.swift */,
+				D9BECB3525FBEC4900457255 /* ComicViewController.swift */,
 			);
 			path = Comic;
 			sourceTree = "<group>";
@@ -397,13 +397,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9BECB8525FC095D00457255 /* responseComics.json in Resources */,
-				D9BECB6225FBF02F00457255 /* CharacterListTableViewCell.xib in Resources */,
-				D9BECB6725FBF03400457255 /* CharacterDetailViewController.xib in Resources */,
+				D9BECB6225FBF02F00457255 /* ListTableViewCell.xib in Resources */,
+				D9BECB6725FBF03400457255 /* CharacterViewController.xib in Resources */,
 				D9BECB8725FC095D00457255 /* responseCharacters.json in Resources */,
 				D94A1C9B25FCFE7C0025FB65 /* Config.xcconfig in Resources */,
 				D9BECB5D25FBF02A00457255 /* MainViewController.xib in Resources */,
 				D9BECAAC25FBC03700457255 /* LaunchScreen.storyboard in Resources */,
-				D9BECBA925FC117600457255 /* ComicDetailViewController.xib in Resources */,
+				D9BECBA925FC117600457255 /* ComicViewController.xib in Resources */,
 				D9BECAA925FBC03700457255 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +445,7 @@
 				D9BECAF325FBE67000457255 /* ModelComic.swift in Sources */,
 				D9BECAFD25FBE71600457255 /* Constants.swift in Sources */,
 				D94A1CD425FD048D0025FB65 /* InternetCheckService.swift in Sources */,
-				D9BECB3725FBEC4900457255 /* ComicDetailViewController.swift in Sources */,
+				D9BECB3725FBEC4900457255 /* ComicViewController.swift in Sources */,
 				D9BECB4525FBEC9400457255 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

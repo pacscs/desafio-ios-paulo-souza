@@ -1,5 +1,5 @@
 //
-//  CharacterDetailViewController.swift
+//  CharacterViewController.swift
 //  desafio-ios-paulo-souza
 //
 //  Created by Paulo Alfredo Coraini de Souza on 12/03/21.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-class CharacterDetailViewController: BaseViewController {
+class CharacterViewController: BaseViewController {
 
-    @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet weak var ImageIcon: UIImageView!
     @IBOutlet weak var viewIcon: UIView!
     @IBOutlet weak var stackViewName: UIStackView!
-    @IBOutlet weak var lblNameTitle: UILabel!
-    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var labelTitleName: UILabel!
+    @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var stackViewDescription: UIStackView!
-    @IBOutlet weak var lblDescriptionTitle: UILabel!
-    @IBOutlet weak var lblDescription: UILabel!
-    @IBOutlet weak var btnDescription: UIButton!
-    @IBOutlet weak var btnMagazine: UIButton!
-    @IBOutlet weak var progress: UIActivityIndicatorView!
+    @IBOutlet weak var LabelTitleDescription: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var buttonDescription: UIButton!
+    @IBOutlet weak var buttonMagazine: UIButton!
+    @IBOutlet weak var progressActivity: UIActivityIndicatorView!
     
     var character: MarvelCharacters
     var loading: Bool = false {
@@ -27,10 +27,10 @@ class CharacterDetailViewController: BaseViewController {
             DispatchQueue.main.async {
                 switch self.loading {
                 case true:
-                    self.progress.startAnimating()
+                    self.progressActivity.startAnimating()
                     UIAccessibility.post(notification: .announcement, argument: "loading. please wait")
                 case false:
-                    self.progress.stopAnimating()
+                    self.progressActivity.stopAnimating()
                     UIAccessibility.post(notification: .announcement, argument: "load done")
                 }
             }
@@ -39,7 +39,7 @@ class CharacterDetailViewController: BaseViewController {
     
     required init(character: MarvelCharacters) {
         self.character = character
-        super.init(nibName: "CharacterDetailViewController", bundle: nil)
+        super.init(nibName: "CharacterViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -48,7 +48,7 @@ class CharacterDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.accessibilityElements = [self.stackViewName!, self.stackViewDescription!, self.btnMagazine!]
+        self.accessibilityElements = [self.stackViewName!, self.stackViewDescription!, self.buttonMagazine!]
         if let name = self.character.name {
             self.title = name
             self.navigationItem.titleView?.accessibilityLabel = name
@@ -60,20 +60,20 @@ class CharacterDetailViewController: BaseViewController {
     }
     
     func setupView() {
-        self.progress.isAccessibilityElement = false
+        self.progressActivity.isAccessibilityElement = false
         if let image = Service.shared.readImage(type: .avatar, withFileName: self.character.thumbnail.pathString()) {
-            self.imgIcon.image = image
+            self.ImageIcon.image = image
             self.viewIcon.dropShadow()
-            self.imgIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:))))
+            self.ImageIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:))))
             self.viewIcon.isHidden = false
             self.viewIcon.isAccessibilityElement = false
-            self.imgIcon.isAccessibilityElement = false
+            self.ImageIcon.isAccessibilityElement = false
         } else {
             self.viewIcon.isHidden = true
         }
         if let name = self.character.name, !name.isEmpty {
-            self.lblNameTitle.text = "Name: "
-            self.lblName.text = name
+            self.labelTitleName.text = "Name: "
+            self.labelName.text = name
             self.stackViewName.isHidden = false
             self.stackViewName.isAccessibilityElement = true
             self.stackViewName.accessibilityLabel = "Name: \(name)"
@@ -81,21 +81,21 @@ class CharacterDetailViewController: BaseViewController {
             self.stackViewName.isHidden = true
         }
         if let description = self.character.description, !description.isEmpty {
-            self.lblDescriptionTitle.text = "Description: "
-            self.lblDescription.text = description
+            self.LabelTitleDescription.text = "Description: "
+            self.labelDescription.text = description
             self.stackViewDescription.isHidden = false
             self.stackViewDescription.isAccessibilityElement = true
             self.stackViewDescription.accessibilityLabel = "description: \(description)"
         } else {
             self.stackViewDescription.isHidden = true
         }
-        self.btnMagazine.setTitle("most expensive magazine!", for: .normal)
-        self.btnMagazine.setTitleColor(UIColor.systemBlue, for: .normal)
-        self.btnMagazine.layer.borderColor = UIColor.systemBlue.cgColor
-        self.btnMagazine.layer.borderWidth = 1
-        self.btnMagazine.layer.cornerRadius = 4
-        self.btnMagazine.layer.masksToBounds = true
-        self.btnMagazine.accessibilityHint = "load the moast expensive magazine for this hero"
+        self.buttonMagazine.setTitle("most expensive magazine!", for: .normal)
+        self.buttonMagazine.setTitleColor(UIColor.systemBlue, for: .normal)
+        self.buttonMagazine.layer.borderColor = UIColor.systemBlue.cgColor
+        self.buttonMagazine.layer.borderWidth = 1
+        self.buttonMagazine.layer.cornerRadius = 4
+        self.buttonMagazine.layer.masksToBounds = true
+        self.buttonMagazine.accessibilityHint = "load the moast expensive magazine for this hero"
     }
     
     func task(id: String) {
@@ -119,7 +119,7 @@ class CharacterDetailViewController: BaseViewController {
                     return price1 > price2
                 }).first {
                     DispatchQueue.main.async {
-                        self.navigationController?.pushViewController(ComicDetailViewController(comic: comic), animated: true)
+                        self.navigationController?.pushViewController(ComicViewController(comic: comic), animated: true)
                     }
                 }
             } else {
@@ -132,7 +132,7 @@ class CharacterDetailViewController: BaseViewController {
     }
     
     @IBAction func btnDescription(_ sender: UIButton) {
-        self.lblDescription.numberOfLines = self.lblDescription.numberOfLines == 3 ? 0 : 3
+        self.labelDescription.numberOfLines = self.labelDescription.numberOfLines == 3 ? 0 : 3
     }
 
     @IBAction func btnMagazine(_ sender: UIButton) {
@@ -152,7 +152,7 @@ class CharacterDetailViewController: BaseViewController {
     @objc
     func imageTapped(_ sender: UITapGestureRecognizer) {
         if let keyWindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive}).map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.filter({$0.isKeyWindow}).first,
-            let imageView = self.imgIcon,
+            let imageView = self.ImageIcon,
             let image = imageView.image {
             let bgView = UIView()
             bgView.frame = keyWindow.frame
@@ -178,7 +178,7 @@ class CharacterDetailViewController: BaseViewController {
             newImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage)))
             newView.addSubview(newImageView)
             self.viewIcon.alpha = 0
-            self.imgIcon.alpha = 0
+            self.ImageIcon.alpha = 0
             UIView.animate(withDuration: 0.75, animations: {
                 let wView = UIScreen.main.bounds.width
                 let hView = (image.size.height * wView) / image.size.width
@@ -199,11 +199,11 @@ class CharacterDetailViewController: BaseViewController {
             let newImageView = newView.subviews.first(where: { $0.tag == 1705}) {
             UIView.animate(withDuration: 0.75, animations: {
                 newView.frame = self.viewIcon.convert(self.viewIcon.frame, to: nil)
-                newImageView.frame.size = CGSize(width: self.imgIcon.frame.size.width, height: self.imgIcon.frame.size.height)
+                newImageView.frame.size = CGSize(width: self.ImageIcon.frame.size.width, height: self.ImageIcon.frame.size.height)
                 bgView.alpha = 0
             }, completion: { (_) in
                 self.viewIcon.alpha = 1
-                self.imgIcon.alpha = 1
+                self.ImageIcon.alpha = 1
                 bgView.removeFromSuperview()
                 newView.removeFromSuperview()
                 newImageView.removeFromSuperview()
