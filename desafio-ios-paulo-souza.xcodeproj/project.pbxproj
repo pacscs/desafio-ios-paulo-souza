@@ -212,10 +212,11 @@
 		D9BECAE225FBE43F00457255 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9BECB3C25FBEC5D00457255 /* MainViewController.swift */,
+				D9BECB2E25FBEC2F00457255 /* CharacterDetailViewController.swift */,
+				D9BECB3525FBEC4900457255 /* ComicViewController.swift */,
+				D9BECB4325FBEC9400457255 /* ListTableViewCell.swift */,
 				D9BECB2625FBEBF500457255 /* BaseViewController.swift */,
-				D9BECAE625FBE5CF00457255 /* Character */,
-				D9BECAE725FBE5DA00457255 /* Comic */,
-				D9BECAE525FBE5CA00457255 /* Main */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,39 +243,6 @@
 				D94A1CD325FD048D0025FB65 /* InternetCheckService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		D9BECAE525FBE5CA00457255 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				D9BECB3C25FBEC5D00457255 /* MainViewController.swift */,
-				D9BECAE825FBE5F000457255 /* Cell */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		D9BECAE625FBE5CF00457255 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				D9BECB2E25FBEC2F00457255 /* CharacterDetailViewController.swift */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		D9BECAE725FBE5DA00457255 /* Comic */ = {
-			isa = PBXGroup;
-			children = (
-				D9BECB3525FBEC4900457255 /* ComicViewController.swift */,
-			);
-			path = Comic;
-			sourceTree = "<group>";
-		};
-		D9BECAE825FBE5F000457255 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				D9BECB4325FBEC9400457255 /* ListTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		D9BECB0625FBE7A500457255 /* Delegate */ = {
