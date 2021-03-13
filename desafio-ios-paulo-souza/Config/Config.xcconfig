@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  desafio-ios-paulo-souza
+//
+//  Created by Paulo Alfredo Coraini de Souza on 13/03/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MARVEL_PUBLIC_KEY = INSERT_YOUR_PUBLIC_KEY
+MARVEL_PRIVATE_KEY = INSERT_YOUR_PRIVATE_KEY
