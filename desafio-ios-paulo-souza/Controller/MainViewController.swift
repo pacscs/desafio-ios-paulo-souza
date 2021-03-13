@@ -26,14 +26,17 @@ class MainViewController: BaseViewController {
         self.title = "Marvel Heroes"
         self.navigationItem.titleView?.accessibilityLabel = "Marvel Heroes"
         self.setupView()
-        
+       
         if !InternetCheckService.isConnectedToNetwork() {
             alert(title: "Atencao" , message: "Celular nao conectado")
+            
         } else {
+          
+            
             self.loadCharacters(fake: fake)
+
         }
     }
-    
     func loadCharacters(fake: Bool) {
         self.progressActivity.startAnimating()
         if fake {

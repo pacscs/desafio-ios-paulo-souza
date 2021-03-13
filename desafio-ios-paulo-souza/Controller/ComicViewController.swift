@@ -9,6 +9,7 @@ import UIKit
 
 class ComicViewController: BaseViewController {
 
+    @IBOutlet weak var backScrennImage: UIImageView!
     @IBOutlet weak var stackViewImage: UIStackView!
     @IBOutlet weak var viewIcon: UIView!
     @IBOutlet weak var imageIcon: UIImageView!

@@ -44,7 +44,7 @@
                                     <constraint firstItem="hOo-s0-kRf" firstAttribute="top" secondItem="44I-un-uLh" secondAttribute="top" id="u1C-1P-ToJ"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblTitle" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-t8-e8f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelTitle" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-t8-e8f">
                                 <rect key="frame" x="84" y="0.0" width="204" height="68"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -63,9 +63,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imgIcon" destination="hOo-s0-kRf" id="9Ml-Yg-arr"/>
-                <outlet property="lblTitle" destination="7hT-t8-e8f" id="C7k-Bb-lbh"/>
-                <outlet property="progress" destination="oKr-W2-E7Q" id="iOU-Kf-1Fb"/>
+                <outlet property="imageIcon" destination="hOo-s0-kRf" id="9Ml-Yg-arr"/>
+                <outlet property="labelTitle" destination="7hT-t8-e8f" id="C7k-Bb-lbh"/>
+                <outlet property="progressActivity" destination="oKr-W2-E7Q" id="iOU-Kf-1Fb"/>
                 <outlet property="viewIcon" destination="hOo-s0-kRf" id="Owh-5x-vCd"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="140.625"/>

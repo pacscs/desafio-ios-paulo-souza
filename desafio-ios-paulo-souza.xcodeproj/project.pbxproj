@@ -202,9 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				D9BECB5C25FBF02A00457255 /* MainViewController.xib */,
-				D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */,
 				D9BECB6625FBF03400457255 /* CharacterViewController.xib */,
 				D9BECBA825FC117600457255 /* ComicViewController.xib */,
+				D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
