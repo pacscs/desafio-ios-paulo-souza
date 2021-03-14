@@ -24,7 +24,7 @@ macOS 10.15.7
 
 **Todos os testes foram executados com sucesso**
 
-![desafio-ios-paulo-souza-tests](https://user-images.githubusercontent.com/74614731/111081452-2dc08880-84e2-11eb-9b2c-d22c24137bf9.gif)
+![desafio](https://user-images.githubusercontent.com/74614731/111082596-e4733780-84e7-11eb-86ba-fb2df47c8bd9.gif)
 
 
 Todo projeto foi criado com conhecimentos pessoais e além de consultas para melhoria através:
