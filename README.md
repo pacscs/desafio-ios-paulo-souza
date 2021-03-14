@@ -10,6 +10,12 @@ Este é um projeto criado com intuito de listar personagens da Marvel e detalhar
 **APP SIMULADO APENAS PELO SIMULATOR, NÃO FOI SIMULADO COM DEVICES**
 
 
+
+![ezgif com-optimize-2](https://user-images.githubusercontent.com/74614731/111084733-a0d1fb00-84f2-11eb-8bfa-27cb0eb43e97.gif)
+
+
+
+
 - Para buildar o simulador deve-se atentar na inserção da API KEY própria no arquivo: Config.xcconfig, dentro da pasta Config. Caso contrário o simulador não irá chamar a API. *Verificação de API criada para ocultar a Privete and Public Key fornecida pela Marvel.
 
 - Aplicativo criado com modelo de Arquitetura MVC pois estou mais confortável com este modelo, porque ainda não me aprofundei nos outros modelos, apenas tendo conhecimento dos mesmos.(MVVM, MVP e VIPER). Mas continuo estudando e buscarei aprender.
