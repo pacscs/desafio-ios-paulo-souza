@@ -27,6 +27,6 @@ Este é um projeto criado com intuito de listar personagens da Marvel e detalhar
 ![desafio](https://user-images.githubusercontent.com/74614731/111082596-e4733780-84e7-11eb-86ba-fb2df47c8bd9.gif)
 
 
-Todo projeto foi criado com conhecimentos pessoais e além de consultas para melhoria através:
-StackOverFlow, RayWenderlich, CleanCode, HackingWithSwift, Apple Developer Documentation e Develop in Swift(Intro to Development with Swift e também Fundamentals) - Apple`s Book.
+Todo projeto foi criado a partir de conhecimentos pessoais e de consultas para melhoria do código através de pesquisas no:
+StackOverFlow, RayWenderlich, CleanCode, HackingWithSwift, Apple Developer Documentation e Develop in Swift(Intro e também Fundamentals) - Apple's Book.
 
