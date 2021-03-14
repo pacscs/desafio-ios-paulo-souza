@@ -12,7 +12,7 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressActivity: UIActivityIndicatorView!
     
-    var characters: [MarvelCharacters] = Array()
+    var characters: [MarvelCharactersResult] = Array()
     
     var currentIndex: Int = 0
     var numberOfItens: Int = 0
@@ -65,7 +65,7 @@ class MainViewController: BaseViewController {
         })
     }
     
-    func handleResults(characters: MarvelCharacterDataContainer) {
+    func handleResults(characters: MarvelCharacterData) {
         if let c = characters.results, let offset = characters.offset, let total = characters.total {
             self.characters.append(contentsOf: c)
             self.currentIndex = offset + self.limit

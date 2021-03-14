@@ -8,7 +8,6 @@
 import UIKit
 import Foundation
 
-// MARK: - MarvelComicsComics
 struct MarvelComics: Codable {
     var code: Int?
     var status: String?
@@ -17,7 +16,7 @@ struct MarvelComics: Codable {
     var attributionHTML: String?
     var etag: String?
     var data: MarvelComicsData?
-
+    
     enum CodingKeys: String, CodingKey {
         case code = "code"
         case status = "status"
@@ -28,15 +27,13 @@ struct MarvelComics: Codable {
         case data = "data"
     }
 }
-
-// MARK: - MarvelComicsData
 struct MarvelComicsData: Codable {
     var offset: Int?
     var limit: Int?
     var total: Int?
     var count: Int?
     var results: [MarvelComicsResult]?
-
+    
     enum CodingKeys: String, CodingKey {
         case offset = "offset"
         case limit = "limit"
@@ -45,15 +42,13 @@ struct MarvelComicsData: Codable {
         case results = "results"
     }
 }
-
-// MARK: - MarvelComicsResult
 struct MarvelComicsResult: Codable {
     var id: Int?
     var digitalID: Int?
     var title: String?
     var issueNumber: Int?
-    var variantDescription: String?
-    var resultDescription: String?
+    var `variantDescription`: String?
+    var `resultDescription`: String?
     var modified: String?
     var isbn: String?
     var upc: String?
@@ -77,14 +72,14 @@ struct MarvelComicsResult: Codable {
     var characters: MarvelComicsCharacters?
     var stories: MarvelComicsStories?
     var events: MarvelComicsCharacters?
-
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case digitalID = "digitalId"
         case title = "title"
         case issueNumber = "issueNumber"
-        case variantDescription = "variantDescription"
-        case resultDescription = "description"
+        case `variantDescription` = "variantDescription"
+        case `resultDescription` = "description"
         case modified = "modified"
         case isbn = "isbn"
         case upc = "upc"
@@ -109,15 +104,73 @@ struct MarvelComicsResult: Codable {
         case stories = "stories"
         case events = "events"
     }
+    
+    init (id: Int? = nil,
+          digitalID: Int?  = nil,
+          title: String?  = nil,
+          issueNumber: Int?  = nil,
+          variantDescription: String? = nil,
+          resultDescription: String? = nil,
+          modified: String? = nil,
+          isbn: String? = nil,
+          upc: String? = nil,
+          diamondCode: String? = nil,
+          ean: String? = nil,
+          issn: String? = nil,
+          format: String? = nil,
+          pageCount: Int? = nil,
+          textObjects: [MarvelComicsTextObject]? = nil,
+          resourceURI: String? = nil,
+          urls: [MarvelComicsURL]? = nil,
+          series: MarvelComicsSeries? = nil,
+          variants: [MarvelComicsSeries]? = nil,
+          collections: [MarvelComicsSeries]? = nil,
+          collectedIssues: [MarvelComicsSeries]? = nil,
+          dates: [MarvelComicsDate]? = nil,
+          prices: [MarvelComicsPrice]? = nil,
+          thumbnail: MarvelComicsThumbnail,
+          images: [MarvelComicsThumbnail]? = nil,
+          creators: MarvelComicsCreators? = nil,
+          characters: MarvelComicsCharacters? = nil,
+          stories: MarvelComicsStories? = nil,
+          events: MarvelComicsCharacters? = nil) {
+        self.id = id
+        self.title = title
+        self.issueNumber = issueNumber
+        self.variantDescription = variantDescription
+        self.resultDescription = resultDescription
+        self.modified = modified
+        self.isbn = isbn
+        self.upc = upc
+        self.diamondCode = diamondCode
+        self.ean = ean
+        self.issn = issn
+        self.format = format
+        self.pageCount = pageCount
+        self.textObjects = textObjects
+        self.resourceURI = resourceURI
+        self.urls = urls
+        self.series = series
+        self.variants = variants
+        self.collections = collections
+        self.collectedIssues = collectedIssues
+        self.dates = dates
+        self.prices = prices
+        self.thumbnail = thumbnail
+        self.images = images
+        self.creators = creators
+        self.characters = characters
+        self.stories = stories
+        self.events = events
+    }
 }
 
-// MARK: - MarvelComicsCharacters
 struct MarvelComicsCharacters: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [MarvelComicsSeries]?
     var returned: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case available = "available"
         case collectionURI = "collectionURI"
@@ -126,24 +179,22 @@ struct MarvelComicsCharacters: Codable {
     }
 }
 
-// MARK: - MarvelComicsSeries
 struct MarvelComicsSeries: Codable {
     var resourceURI: String?
     var name: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case resourceURI = "resourceURI"
         case name = "name"
     }
 }
 
-// MARK: - MarvelComicsCreators
 struct MarvelComicsCreators: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [MarvelComicsCreatorsItem]?
     var returned: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case available = "available"
         case collectionURI = "collectionURI"
@@ -152,12 +203,11 @@ struct MarvelComicsCreators: Codable {
     }
 }
 
-// MARK: - MarvelComicsCreatorsItem
 struct MarvelComicsCreatorsItem: Codable {
     var resourceURI: String?
     var name: String?
     var role: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case resourceURI = "resourceURI"
         case name = "name"
@@ -165,29 +215,35 @@ struct MarvelComicsCreatorsItem: Codable {
     }
 }
 
-// MARK: - MarvelComicsDate
 struct MarvelComicsDate: Codable {
     var type: String?
     var date: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case type = "type"
         case date = "date"
     }
 }
 
-// MARK: - MarvelComicsThumbnail
 struct MarvelComicsThumbnail: Codable {
     var path: String?
     var `extension`: String?
     var image: Observable<UIImage> = Observable(UIImage())
-
+    
     enum CodingKeys: String, CodingKey {
         case path = "path"
         case `extension` = "extension"
     }
     
-    init(image: UIImage) {
+    init(path: String? = nil,
+         extension: String? = nil,
+         image: UIImage) {
+        self.path = path
+        self.extension = `extension`
+        self.image = Observable(image)
+    }
+    
+    init (image: UIImage) {
         self.image = Observable(image)
     }
     
@@ -198,24 +254,22 @@ struct MarvelComicsThumbnail: Codable {
     
 }
 
-// MARK: - MarvelComicsPrice
 struct MarvelComicsPrice: Codable {
     var type: String?
     var price: Double?
-
+    
     enum CodingKeys: String, CodingKey {
         case type = "type"
         case price = "price"
     }
 }
 
-// MARK: - MarvelComicsStories
 struct MarvelComicsStories: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [MarvelComicsStoriesItem]?
     var returned: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case available = "available"
         case collectionURI = "collectionURI"
@@ -224,12 +278,11 @@ struct MarvelComicsStories: Codable {
     }
 }
 
-// MARK: - MarvelComicsStoriesItem
 struct MarvelComicsStoriesItem: Codable {
     var resourceURI: String?
     var name: String?
     var type: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case resourceURI = "resourceURI"
         case name = "name"
@@ -237,12 +290,11 @@ struct MarvelComicsStoriesItem: Codable {
     }
 }
 
-// MARK: - MarvelComicsTextObject
 struct MarvelComicsTextObject: Codable {
     var type: String?
     var language: String?
     var text: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case type = "type"
         case language = "language"
@@ -250,11 +302,10 @@ struct MarvelComicsTextObject: Codable {
     }
 }
 
-// MARK: - MarvelComicsURL
 struct MarvelComicsURL: Codable {
     var type: String?
     var url: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case type = "type"
         case url = "url"

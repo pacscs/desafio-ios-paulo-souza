@@ -10,12 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterViewController" customModule="desafio_ios_paulo_souza" customModuleProvider="target">
             <connections>
-                <outlet property="ImageIcon" destination="tRn-bG-S6F" id="CaU-js-dH7"/>
-                <outlet property="LabelTitleDescription" destination="oJq-AP-K4l" id="1bJ-vU-eWv"/>
                 <outlet property="buttonDescription" destination="QUf-3M-3Ah" id="mZB-pe-4I8"/>
                 <outlet property="buttonMagazine" destination="tMK-0e-AbY" id="W4U-KH-X4U"/>
+                <outlet property="imageIcon" destination="tRn-bG-S6F" id="CaU-js-dH7"/>
                 <outlet property="labelDescription" destination="0fV-KJ-4aR" id="0q3-Ka-9Xx"/>
                 <outlet property="labelName" destination="cQz-KV-xHN" id="YP5-J8-CNj"/>
+                <outlet property="labelTitleDescription" destination="oJq-AP-K4l" id="1bJ-vU-eWv"/>
                 <outlet property="labelTitleName" destination="lVI-ue-l8m" id="v1E-GK-E3D"/>
                 <outlet property="progressActivity" destination="IwL-w7-AN9" id="wb7-1d-gs3"/>
                 <outlet property="stackViewDescription" destination="m8B-d2-QMd" id="c4f-MB-4MA"/>
@@ -114,7 +114,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDescription" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-KJ-4aR" userLabel="labelDescription">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDescription" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-KJ-4aR" userLabel="labelDescription">
                                                                     <rect key="frame" x="0.0" y="32" width="343" height="30"/>
                                                                     <accessibility key="accessibilityConfiguration">
                                                                         <accessibilityTraits key="traits" notEnabled="YES"/>

@@ -19,13 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Directory:")
         print(Service.shared.documentDirectory().removeExtra())
         print("========")
-        //Service.shared.clearDocumentDirectory()
 
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
@@ -33,10 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         
     }
-    
-    // MARK: - Core Data stack
-
-    lazy var persistentContainer: NSPersistentCloudKitContainer = {
+        lazy var persistentContainer: NSPersistentCloudKitContainer = {
 
         let container = NSPersistentCloudKitContainer(name: "desafio_ios_paulo_souza")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -45,10 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
-        return container
-    }()
-
-    // MARK: - Core Data Saving support
+            return container
+            
+        }()
 
     func saveContext () {
         let context = persistentContainer.viewContext
@@ -64,13 +56,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-public extension UIApplication {
-    
-    func clearLaunchScreenCache() {
-        do {
-            try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
-        } catch {
-            print("Failed to delete launch screen cache: \(error)")
-        }
-    }
-}

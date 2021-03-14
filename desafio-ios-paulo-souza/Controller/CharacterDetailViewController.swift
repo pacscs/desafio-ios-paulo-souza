@@ -9,19 +9,19 @@ import UIKit
 
 class CharacterViewController: BaseViewController {
 
-    @IBOutlet weak var ImageIcon: UIImageView!
+    @IBOutlet weak var imageIcon: UIImageView!
     @IBOutlet weak var viewIcon: UIView!
     @IBOutlet weak var stackViewName: UIStackView!
     @IBOutlet weak var labelTitleName: UILabel!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var stackViewDescription: UIStackView!
-    @IBOutlet weak var LabelTitleDescription: UILabel!
+    @IBOutlet weak var labelTitleDescription: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var buttonDescription: UIButton!
     @IBOutlet weak var buttonMagazine: UIButton!
     @IBOutlet weak var progressActivity: UIActivityIndicatorView!
     
-    var character: MarvelCharacters
+    var character: MarvelCharactersResult
     var loading: Bool = false {
         didSet {
             DispatchQueue.main.async {
@@ -37,7 +37,7 @@ class CharacterViewController: BaseViewController {
         }
     }
     
-    required init(character: MarvelCharacters) {
+    required init(character: MarvelCharactersResult) {
         self.character = character
         super.init(nibName: "CharacterViewController", bundle: nil)
     }
@@ -62,12 +62,12 @@ class CharacterViewController: BaseViewController {
     func setupView() {
         self.progressActivity.isAccessibilityElement = false
         if let image = Service.shared.readImage(type: .avatar, withFileName: self.character.thumbnail.pathString()) {
-            self.ImageIcon.image = image
+            self.imageIcon.image = image
             self.viewIcon.dropShadow()
-            self.ImageIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:))))
+            self.imageIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:))))
             self.viewIcon.isHidden = false
             self.viewIcon.isAccessibilityElement = false
-            self.ImageIcon.isAccessibilityElement = false
+            self.imageIcon.isAccessibilityElement = false
         } else {
             self.viewIcon.isHidden = true
         }
@@ -81,7 +81,7 @@ class CharacterViewController: BaseViewController {
             self.stackViewName.isHidden = true
         }
         if let description = self.character.description, !description.isEmpty {
-            self.LabelTitleDescription.text = "Description: "
+            self.labelTitleDescription.text = "Description: "
             self.labelDescription.text = description
             self.stackViewDescription.isHidden = false
             self.stackViewDescription.isAccessibilityElement = true
@@ -152,7 +152,7 @@ class CharacterViewController: BaseViewController {
     @objc
     func imageTapped(_ sender: UITapGestureRecognizer) {
         if let keyWindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive}).map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.filter({$0.isKeyWindow}).first,
-            let imageView = self.ImageIcon,
+            let imageView = self.imageIcon,
             let image = imageView.image {
             let bgView = UIView()
             bgView.frame = keyWindow.frame
@@ -178,7 +178,7 @@ class CharacterViewController: BaseViewController {
             newImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage)))
             newView.addSubview(newImageView)
             self.viewIcon.alpha = 0
-            self.ImageIcon.alpha = 0
+            self.imageIcon.alpha = 0
             UIView.animate(withDuration: 0.75, animations: {
                 let wView = UIScreen.main.bounds.width
                 let hView = (image.size.height * wView) / image.size.width
@@ -199,11 +199,11 @@ class CharacterViewController: BaseViewController {
             let newImageView = newView.subviews.first(where: { $0.tag == 1705}) {
             UIView.animate(withDuration: 0.75, animations: {
                 newView.frame = self.viewIcon.convert(self.viewIcon.frame, to: nil)
-                newImageView.frame.size = CGSize(width: self.ImageIcon.frame.size.width, height: self.ImageIcon.frame.size.height)
+                newImageView.frame.size = CGSize(width: self.imageIcon.frame.size.width, height: self.imageIcon.frame.size.height)
                 bgView.alpha = 0
             }, completion: { (_) in
                 self.viewIcon.alpha = 1
-                self.ImageIcon.alpha = 1
+                self.imageIcon.alpha = 1
                 bgView.removeFromSuperview()
                 newView.removeFromSuperview()
                 newImageView.removeFromSuperview()

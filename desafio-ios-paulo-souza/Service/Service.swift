@@ -11,7 +11,7 @@ class Service {
  
     static let shared = Service()
     
-    func taskCharacter(orderBy: String? = "name", limit: String? = "20", offset: String? = "0", callbackSuccess: @escaping ((MarvelCharacterDataContainer) -> Void), callbackError: @escaping ((Error?) -> Void)) {
+    func taskCharacter(orderBy: String? = "name", limit: String? = "20", offset: String? = "0", callbackSuccess: @escaping ((MarvelCharacterData) -> Void), callbackError: @escaping ((Error?) -> Void)) {
         var url_string: String = base_url + EnumEndpoints.characters.toString()
         url_string += "?"
         if let orderBy = orderBy {

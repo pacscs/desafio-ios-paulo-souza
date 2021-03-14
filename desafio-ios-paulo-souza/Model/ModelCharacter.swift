@@ -8,7 +8,6 @@
 import UIKit
 import Foundation
 
-// MARK: - MarvelCharacter
 struct MarvelCharacter: Codable {
     var code: Int?
     var status: String?
@@ -16,7 +15,7 @@ struct MarvelCharacter: Codable {
     var attributionText: String?
     var attributionHTML: String?
     var etag: String?
-    var data: MarvelCharacterDataContainer?
+    var data: MarvelCharacterData?
 
     enum CodingKeys: String, CodingKey {
         case code = "code"
@@ -29,13 +28,12 @@ struct MarvelCharacter: Codable {
     }
 }
 
-// MARK: - MarvelCharacterDataContainer
-struct MarvelCharacterDataContainer: Codable {
+struct MarvelCharacterData: Codable {
     var offset: Int?
     var limit: Int?
     var total: Int?
     var count: Int?
-    var results: [MarvelCharacters]?
+    var results: [MarvelCharactersResult]?
 
     enum CodingKeys: String, CodingKey {
         case offset = "offset"
@@ -46,8 +44,7 @@ struct MarvelCharacterDataContainer: Codable {
     }
 }
 
-// MARK: - MarvelCharacters
-struct MarvelCharacters: Codable {
+struct MarvelCharactersResult: Codable {
     var id: Int?
     var name: String?
     var `description`: String?
@@ -100,7 +97,6 @@ struct MarvelCharacters: Codable {
     
 }
 
-// MARK: - MarvelCharacterComics
 struct MarvelCharacterComics: Codable {
     var available: Int?
     var collectionURI: String?
@@ -115,7 +111,6 @@ struct MarvelCharacterComics: Codable {
     }
 }
 
-// MARK: - MarvelComicsItem
 struct MarvelComicsItem: Codable {
     var resourceURI: String?
     var name: String?
@@ -126,7 +121,6 @@ struct MarvelComicsItem: Codable {
     }
 }
 
-// MARK: - MarvelCharacterSeries
 struct MarvelCharacterSeries: Codable {
     var available: Int?
     var collectionURI: String?
@@ -141,7 +135,6 @@ struct MarvelCharacterSeries: Codable {
     }
 }
 
-// MARK: - MarvelSeriesItem
 struct MarvelSeriesItem: Codable {
     var resourceURI: String?
     var name: String?
@@ -152,7 +145,6 @@ struct MarvelSeriesItem: Codable {
     }
 }
 
-// MARK: - MarvelCharacterStories
 struct MarvelCharacterStories: Codable {
     var available: Int?
     var collectionURI: String?
@@ -167,7 +159,6 @@ struct MarvelCharacterStories: Codable {
     }
 }
 
-// MARK: - MarvelStoriesItem
 struct MarvelStoriesItem: Codable {
     var resourceURI: String?
     var name: String?
@@ -179,8 +170,6 @@ struct MarvelStoriesItem: Codable {
         case type = "type"
     }
 }
-
-// MARK: - MarvelCharacterEvents
 struct MarvelCharacterEvents: Codable {
     var available: Int?
     var collectionURI: String?
@@ -194,8 +183,6 @@ struct MarvelCharacterEvents: Codable {
         case returned = "returned"
     }
 }
-
-// MARK: - MarvelEventsItem
 struct MarvelEventsItem: Codable {
     var resourceURI: String?
     var name: String?
@@ -205,8 +192,6 @@ struct MarvelEventsItem: Codable {
         case name = "name"
     }
 }
-
-// MARK: - MarvelThumbnail
 struct MarvelThumbnail: Codable {
     var path: String?
     var `extension`: String?
@@ -235,8 +220,6 @@ struct MarvelThumbnail: Codable {
     }
     
 }
-
-// MARK: - MarvelURL
 struct MarvelURL: Codable {
     var type: String?
     var url: String?
@@ -246,19 +229,14 @@ struct MarvelURL: Codable {
         case url = "url"
     }
 }
-
 struct Observable<T> {
-    
     typealias Observer = String
-
     private var handlers: [Observer: (T) -> Void] = [:]
-
     var value: T {
         didSet {
             handlers.forEach { $0.value(value) }
         }
     }
-
     init(_ value: T) {
         self.value = value
     }

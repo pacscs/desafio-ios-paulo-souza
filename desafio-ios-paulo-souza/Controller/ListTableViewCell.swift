@@ -22,7 +22,7 @@ class ListTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setup(character: inout MarvelCharacters) {
+    func setup(character: inout MarvelCharactersResult) {
         self.labelTitle.text = character.name
         self.viewIcon.layer.cornerRadius = self.imageIcon.frame.width / 2
         self.imageIcon.layer.cornerRadius = self.imageIcon.frame.width / 2
@@ -34,7 +34,7 @@ class ListTableViewCell: UITableViewCell {
         self.accessibilityHint = "double tap do see more details"
     }
     
-    func setupImage(character: MarvelCharacters) {
+    func setupImage(character: MarvelCharactersResult) {
         self.progressActivity.isAccessibilityElement = false
         self.viewIcon.dropShadow()
         self.progressActivity.startAnimating()

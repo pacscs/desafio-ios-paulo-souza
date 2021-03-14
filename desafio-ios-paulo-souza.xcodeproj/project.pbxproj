@@ -12,19 +12,22 @@
 		D94A1C9D25FCFE7C0025FB65 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D94A1C9A25FCFE7C0025FB65 /* Config.xcconfig */; };
 		D94A1CB525FCFF620025FB65 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A1CB425FCFF620025FB65 /* Environment.swift */; };
 		D94A1CD425FD048D0025FB65 /* InternetCheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A1CD325FD048D0025FB65 /* InternetCheckService.swift */; };
+		D94A615525FE5C500023EB3D /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A615425FE5C500023EB3D /* CharacterTests.swift */; };
+		D94A615D25FE5C5F0023EB3D /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A615C25FE5C5F0023EB3D /* ListTests.swift */; };
+		D94A616E25FE62E60023EB3D /* ComicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A616D25FE62E60023EB3D /* ComicTests.swift */; };
 		D9BECA9D25FBC03300457255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECA9C25FBC03300457255 /* AppDelegate.swift */; };
 		D9BECA9F25FBC03300457255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECA9E25FBC03300457255 /* SceneDelegate.swift */; };
 		D9BECAA725FBC03300457255 /* desafio_ios_paulo_souza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAA525FBC03300457255 /* desafio_ios_paulo_souza.xcdatamodeld */; };
 		D9BECAA925FBC03700457255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9BECAA825FBC03700457255 /* Assets.xcassets */; };
 		D9BECAAC25FBC03700457255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9BECAAA25FBC03700457255 /* LaunchScreen.storyboard */; };
-		D9BECAB725FBC03800457255 /* desafio_ios_paulo_souzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAB625FBC03800457255 /* desafio_ios_paulo_souzaTests.swift */; };
+		D9BECAB725FBC03800457255 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAB625FBC03800457255 /* MainTests.swift */; };
 		D9BECAC225FBC03800457255 /* desafio_ios_paulo_souzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAC125FBC03800457255 /* desafio_ios_paulo_souzaUITests.swift */; };
 		D9BECAEB25FBE65900457255 /* ModelCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAEA25FBE65900457255 /* ModelCharacter.swift */; };
 		D9BECAF325FBE67000457255 /* ModelComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAF225FBE67000457255 /* ModelComic.swift */; };
 		D9BECAF825FBE6B000457255 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAF725FBE6B000457255 /* Service.swift */; };
 		D9BECAFD25FBE71600457255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAFC25FBE71600457255 /* Constants.swift */; };
-		D9BECB0925FBE89B00457255 /* DocService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB0825FBE89B00457255 /* DocService.swift */; };
-		D9BECB0E25FBE8A900457255 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB0D25FBE8A900457255 /* ImageService.swift */; };
+		D9BECB0925FBE89B00457255 /* DocumentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB0825FBE89B00457255 /* DocumentsService.swift */; };
+		D9BECB0E25FBE8A900457255 /* ImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB0D25FBE8A900457255 /* ImagesService.swift */; };
 		D9BECB2725FBEBF500457255 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB2625FBEBF500457255 /* BaseViewController.swift */; };
 		D9BECB3025FBEC2F00457255 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB2E25FBEC2F00457255 /* CharacterDetailViewController.swift */; };
 		D9BECB3725FBEC4900457255 /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB3525FBEC4900457255 /* ComicViewController.swift */; };
@@ -60,6 +63,9 @@
 		D94A1CB425FCFF620025FB65 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D94A1CBD25FD00A70025FB65 /* Local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Local.xcconfig; sourceTree = "<group>"; };
 		D94A1CD325FD048D0025FB65 /* InternetCheckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetCheckService.swift; sourceTree = "<group>"; };
+		D94A615425FE5C500023EB3D /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
+		D94A615C25FE5C5F0023EB3D /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
+		D94A616D25FE62E60023EB3D /* ComicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTests.swift; sourceTree = "<group>"; };
 		D9BECA9925FBC03300457255 /* desafio-ios-paulo-souza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios-paulo-souza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BECA9C25FBC03300457255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9BECA9E25FBC03300457255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +74,7 @@
 		D9BECAAB25FBC03700457255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9BECAAD25FBC03700457255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9BECAB225FBC03800457255 /* desafio-ios-paulo-souzaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-ios-paulo-souzaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9BECAB625FBC03800457255 /* desafio_ios_paulo_souzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_ios_paulo_souzaTests.swift; sourceTree = "<group>"; };
+		D9BECAB625FBC03800457255 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		D9BECAB825FBC03800457255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9BECABD25FBC03800457255 /* desafio-ios-paulo-souzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-ios-paulo-souzaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BECAC125FBC03800457255 /* desafio_ios_paulo_souzaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_ios_paulo_souzaUITests.swift; sourceTree = "<group>"; };
@@ -77,8 +83,8 @@
 		D9BECAF225FBE67000457255 /* ModelComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelComic.swift; sourceTree = "<group>"; };
 		D9BECAF725FBE6B000457255 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D9BECAFC25FBE71600457255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D9BECB0825FBE89B00457255 /* DocService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocService.swift; sourceTree = "<group>"; };
-		D9BECB0D25FBE8A900457255 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		D9BECB0825FBE89B00457255 /* DocumentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsService.swift; sourceTree = "<group>"; };
+		D9BECB0D25FBE8A900457255 /* ImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesService.swift; sourceTree = "<group>"; };
 		D9BECB2625FBEBF500457255 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D9BECB2E25FBEC2F00457255 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		D9BECB3525FBEC4900457255 /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +180,10 @@
 		D9BECAB525FBC03800457255 /* desafio-ios-paulo-souzaTests */ = {
 			isa = PBXGroup;
 			children = (
-				D9BECAB625FBC03800457255 /* desafio_ios_paulo_souzaTests.swift */,
+				D9BECAB625FBC03800457255 /* MainTests.swift */,
+				D94A616D25FE62E60023EB3D /* ComicTests.swift */,
+				D94A615425FE5C500023EB3D /* CharacterTests.swift */,
+				D94A615C25FE5C5F0023EB3D /* ListTests.swift */,
 				D9BECAB825FBC03800457255 /* Info.plist */,
 			);
 			path = "desafio-ios-paulo-souzaTests";
@@ -238,8 +247,8 @@
 			children = (
 				D9BECB0725FBE88B00457255 /* New Group */,
 				D9BECAF725FBE6B000457255 /* Service.swift */,
-				D9BECB0825FBE89B00457255 /* DocService.swift */,
-				D9BECB0D25FBE8A900457255 /* ImageService.swift */,
+				D9BECB0825FBE89B00457255 /* DocumentsService.swift */,
+				D9BECB0D25FBE8A900457255 /* ImagesService.swift */,
 				D94A1CD325FD048D0025FB65 /* InternetCheckService.swift */,
 			);
 			path = Service;
@@ -402,10 +411,10 @@
 				D9BECB3025FBEC2F00457255 /* CharacterDetailViewController.swift in Sources */,
 				D9BECAF825FBE6B000457255 /* Service.swift in Sources */,
 				D9BECA9D25FBC03300457255 /* AppDelegate.swift in Sources */,
-				D9BECB0E25FBE8A900457255 /* ImageService.swift in Sources */,
+				D9BECB0E25FBE8A900457255 /* ImagesService.swift in Sources */,
 				D94A1CB525FCFF620025FB65 /* Environment.swift in Sources */,
 				D9BECB2725FBEBF500457255 /* BaseViewController.swift in Sources */,
-				D9BECB0925FBE89B00457255 /* DocService.swift in Sources */,
+				D9BECB0925FBE89B00457255 /* DocumentsService.swift in Sources */,
 				D9BECB3E25FBEC5D00457255 /* MainViewController.swift in Sources */,
 				D9BECAA725FBC03300457255 /* desafio_ios_paulo_souza.xcdatamodeld in Sources */,
 				D9BECAEB25FBE65900457255 /* ModelCharacter.swift in Sources */,
@@ -422,7 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9BECAB725FBC03800457255 /* desafio_ios_paulo_souzaTests.swift in Sources */,
+				D9BECAB725FBC03800457255 /* MainTests.swift in Sources */,
+				D94A616E25FE62E60023EB3D /* ComicTests.swift in Sources */,
+				D94A615D25FE5C5F0023EB3D /* ListTests.swift in Sources */,
+				D94A615525FE5C500023EB3D /* CharacterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
