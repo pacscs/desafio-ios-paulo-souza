@@ -1,9 +1,9 @@
 # desafio-ios-paulo-souza
 
-Este é um projeto criado dentro do prazo estabelecido de 5 dias, criado para desenvolver minhas habilidades como profissional. 
+Este é um projeto criado com intuito de listar personagens da Marvel e detalhar os gibis mais caros de cada personagem de acordo com as API's da Marvel.
 
-Apple`s IDE: Xcode / Version: 12.4
-macOS 10.15.7
+`Apples IDE: Xcode / Version: 12.4
+ macOS 10.15.7`
 
 
 
