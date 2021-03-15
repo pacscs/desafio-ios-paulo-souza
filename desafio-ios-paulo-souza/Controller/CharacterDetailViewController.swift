@@ -89,13 +89,13 @@ class CharacterViewController: BaseViewController {
         } else {
             self.stackViewDescription.isHidden = true
         }
-        self.buttonMagazine.setTitle("most expensive magazine!", for: .normal)
+        self.buttonMagazine.setTitle("check my higher price!!", for: .normal)
         self.buttonMagazine.setTitleColor(UIColor.systemBlue, for: .normal)
         self.buttonMagazine.layer.borderColor = UIColor.systemBlue.cgColor
-        self.buttonMagazine.layer.borderWidth = 1
-        self.buttonMagazine.layer.cornerRadius = 4
+        self.buttonMagazine.layer.borderWidth = 4
+        self.buttonMagazine.layer.cornerRadius = 10
         self.buttonMagazine.layer.masksToBounds = true
-        self.buttonMagazine.accessibilityHint = "load the moast expensive magazine for this hero"
+        self.buttonMagazine.accessibilityHint = "load the higher price magazine for this hero"
     }
     
     func task(id: String) {

@@ -24,14 +24,7 @@ class ListTableViewCell: UITableViewCell {
     
     func setup(character: inout MarvelCharactersResult) {
         self.labelTitle.text = character.name
-        self.viewIcon.layer.cornerRadius = self.imageIcon.frame.width / 2
-        self.imageIcon.layer.cornerRadius = self.imageIcon.frame.width / 2
-        self.imageIcon.layer.masksToBounds = true
-        self.imageIcon.layer.borderColor = UIColor.white.cgColor
-        self.imageIcon.layer.borderWidth = 4
         self.setupImage(character: character)
-        self.accessibilityTraits = .button
-        self.accessibilityHint = "double tap do see more details"
     }
     
     func setupImage(character: MarvelCharactersResult) {

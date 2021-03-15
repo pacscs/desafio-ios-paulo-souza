@@ -20,23 +20,30 @@ class MainViewController: BaseViewController {
     let limit: Int = 20
     var firstTime: Bool = true
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.accessibilityElements = [self.tableView!]
         self.title = "Marvel Heroes"
         self.navigationItem.titleView?.accessibilityLabel = "Marvel Heroes"
         self.setupView()
-       
-        if !InternetCheckService.isConnectedToNetwork() {
-            alert(title: "Atencao" , message: "Celular nao conectado")
-            
-        } else {
-          
-            
-            self.loadCharacters(fake: fake)
-
-        }
+        self.loadData()
     }
+    
+    func loadData() {
+        if !InternetCheckService.isConnectedToNetwork() {
+            let alertController = UIAlertController(title: "OPPSSS...", message:"There's no Available Connection... Please Check Again and...", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Avengers assemble!", style: UIAlertAction.Style.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+            self.loadData()
+            })
+        } else {
+            alert(title: "Are you Ready?", message: "Let's go recruit!!!" )
+            self.loadCharacters(fake: fake)
+    }
+    }
+    
     func loadCharacters(fake: Bool) {
         self.progressActivity.startAnimating()
         if fake {

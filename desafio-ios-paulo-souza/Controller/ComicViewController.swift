@@ -42,8 +42,8 @@ class ComicViewController: BaseViewController {
             self.title = "#\(issueNumber)"
             self.navigationItem.titleView?.accessibilityLabel = "issue number \(issueNumber)"
         } else {
-            self.title = "Most expensive magazine"
-            self.navigationItem.titleView?.accessibilityLabel = "Most expensive magazine"
+            self.title = "check my higher price!"
+            self.navigationItem.titleView?.accessibilityLabel = "check my higher price!"
         }
         self.setupView()
     }
