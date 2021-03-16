@@ -11,6 +11,7 @@ class Service {
  
     static let shared = Service()
     
+    
     func taskCharacter(orderBy: String? = "name", limit: String? = "20", offset: String? = "0", callbackSuccess: @escaping ((MarvelCharacterData) -> Void), callbackError: @escaping ((Error?) -> Void)) {
         var url_string: String = base_url + EnumEndpoints.characters.toString()
         url_string += "?"
@@ -20,7 +21,7 @@ class Service {
             }
             url_string += "orderBy=" + orderBy
         }
-        if let limit = limit {
+            if let limit = limit {
             if url_string.last != "?" {
                 url_string += "&"
             }
