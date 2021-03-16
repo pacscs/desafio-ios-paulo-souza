@@ -15,6 +15,7 @@
 		D94A615525FE5C500023EB3D /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A615425FE5C500023EB3D /* CharacterTests.swift */; };
 		D94A615D25FE5C5F0023EB3D /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A615C25FE5C5F0023EB3D /* ListTests.swift */; };
 		D94A616E25FE62E60023EB3D /* ComicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A616D25FE62E60023EB3D /* ComicTests.swift */; };
+		D9B59BFC26015BE200E13ABA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B59BFB26015BE200E13ABA /* MainViewController.xib */; };
 		D9BECA9D25FBC03300457255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECA9C25FBC03300457255 /* AppDelegate.swift */; };
 		D9BECA9F25FBC03300457255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECA9E25FBC03300457255 /* SceneDelegate.swift */; };
 		D9BECAA725FBC03300457255 /* desafio_ios_paulo_souza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9BECAA525FBC03300457255 /* desafio_ios_paulo_souza.xcdatamodeld */; };
@@ -33,7 +34,6 @@
 		D9BECB3725FBEC4900457255 /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB3525FBEC4900457255 /* ComicViewController.swift */; };
 		D9BECB3E25FBEC5D00457255 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB3C25FBEC5D00457255 /* MainViewController.swift */; };
 		D9BECB4525FBEC9400457255 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BECB4325FBEC9400457255 /* ListTableViewCell.swift */; };
-		D9BECB5D25FBF02A00457255 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB5C25FBF02A00457255 /* MainViewController.xib */; };
 		D9BECB6225FBF02F00457255 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */; };
 		D9BECB6725FBF03400457255 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB6625FBF03400457255 /* CharacterViewController.xib */; };
 		D9BECB8525FC095D00457255 /* responseComics.json in Resources */ = {isa = PBXBuildFile; fileRef = D9BECB8225FC095D00457255 /* responseComics.json */; };
@@ -66,6 +66,7 @@
 		D94A615425FE5C500023EB3D /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 		D94A615C25FE5C5F0023EB3D /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
 		D94A616D25FE62E60023EB3D /* ComicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTests.swift; sourceTree = "<group>"; };
+		D9B59BFB26015BE200E13ABA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D9BECA9925FBC03300457255 /* desafio-ios-paulo-souza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios-paulo-souza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BECA9C25FBC03300457255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9BECA9E25FBC03300457255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		D9BECB3525FBEC4900457255 /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
 		D9BECB3C25FBEC5D00457255 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D9BECB4325FBEC9400457255 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		D9BECB5C25FBF02A00457255 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = "../../../../Downloads/marvel-api-master/desafio-ios-fernando-cani/desafio-ios-fernando-cani/Controller/Main/MainViewController.xib"; sourceTree = "<group>"; };
 		D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		D9BECB6625FBF03400457255 /* CharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
 		D9BECB8225FC095D00457255 /* responseComics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = responseComics.json; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		D9BECAE125FBE43100457255 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D9BECB5C25FBF02A00457255 /* MainViewController.xib */,
+				D9B59BFB26015BE200E13ABA /* MainViewController.xib */,
 				D9BECB6625FBF03400457255 /* CharacterViewController.xib */,
 				D9BECBA825FC117600457255 /* ComicViewController.xib */,
 				D9BECB6125FBF02F00457255 /* ListTableViewCell.xib */,
@@ -369,8 +369,8 @@
 				D9BECB6225FBF02F00457255 /* ListTableViewCell.xib in Resources */,
 				D9BECB6725FBF03400457255 /* CharacterViewController.xib in Resources */,
 				D9BECB8725FC095D00457255 /* responseCharacters.json in Resources */,
+				D9B59BFC26015BE200E13ABA /* MainViewController.xib in Resources */,
 				D94A1C9B25FCFE7C0025FB65 /* Config.xcconfig in Resources */,
-				D9BECB5D25FBF02A00457255 /* MainViewController.xib in Resources */,
 				D9BECAAC25FBC03700457255 /* LaunchScreen.storyboard in Resources */,
 				D9BECBA925FC117600457255 /* ComicViewController.xib in Resources */,
 				D9BECAA925FBC03700457255 /* Assets.xcassets in Resources */,
