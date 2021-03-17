@@ -24,7 +24,7 @@ public enum Environment {
     
     static let marvelPrivateKey: String = {
       guard let marvelPrivateKey = Environment.infoDictionary["MARVEL_PRIVATE_KEY"] as? String else {
-        fatalError("Marvel PRivate Key not set in plist for this environment")
+        fatalError("Marvel Private Key not set in plist for this environment")
       }
       return marvelPrivateKey
     }()

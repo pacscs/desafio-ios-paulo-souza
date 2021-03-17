@@ -128,7 +128,6 @@
 			children = (
 				D94A1C9A25FCFE7C0025FB65 /* Config.xcconfig */,
 				D94A1CBC25FD00830025FB65 /* Local */,
-				D94A1CB425FCFF620025FB65 /* Environment.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -235,6 +234,7 @@
 			children = (
 				D9BECB8425FC095D00457255 /* responseCharacters.json */,
 				D9BECB8225FC095D00457255 /* responseComics.json */,
+				D94A1CB425FCFF620025FB65 /* Environment.swift */,
 				D9BECAFC25FBE71600457255 /* Constants.swift */,
 				D9BECAA825FBC03700457255 /* Assets.xcassets */,
 				D9BECAAA25FBC03700457255 /* LaunchScreen.storyboard */,

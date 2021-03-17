@@ -43,7 +43,7 @@ var hash: String {
 var suffix: String {
     get {
         return "apikey=\(public_key)" + "&ts=\(ts)" + "&hash=\(hash)"
-    }
+    } 
 }
 extension String {
     
